@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+ <display-name>frequencia-online</display-name>
+ <context-param>
+  <param-name>com.sun.faces.writeStateAtFormEnd</param-name>
+  <param-value>false</param-value>
+ </context-param>
+ <context-param>
+  <param-name>contextConfigLocation</param-name>
+  <param-value>/WEB-INF/spring/applicationContext.xml</param-value>
+ </context-param>
+ <!-- PARÂMETRO DO CONTEXTO -->
+ <context-param>
+  <param-name>primefaces.THEME</param-name>
+  <param-value>bootstrap</param-value>
+ </context-param>
+ <!-- FILTROS -->
+ <filter>
+  <filter-name>hibernateFilter</filter-name>
+  <filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
+ </filter>
+ <filter-mapping>
+  <filter-name>hibernateFilter</filter-name>
+  <servlet-name>Faces Servlet</servlet-name>
+ </filter-mapping>
+ <!-- CRIA O CONTÊINER SPRING COMPARTILHADO POR TODOS OS SERVLETS E FILTROS -->
+ <listener>
+  <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+ </listener>
+ <listener>
+  <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+ </listener>
+ <session-config>
+  <session-timeout>35</session-timeout>
+ </session-config>
+ <!-- WEB FONTS -->
+ <mime-mapping>
+  <extension>eot</extension>
+  <mime-type>application/vnd.ms-fontobject</mime-type>
+ </mime-mapping>
+ <mime-mapping>
+  <extension>ttf</extension>
+  <mime-type>application/x-font-ttf</mime-type>
+ </mime-mapping>
+ <mime-mapping>
+  <extension>woff</extension>
+  <mime-type>application/x-font-woff</mime-type>
+ </mime-mapping>
+ <mime-mapping>
+  <extension>woff2</extension>
+  <mime-type>application/x-font-woff2</mime-type>
+ </mime-mapping>
+ <welcome-file-list>
+  <welcome-file>index.html</welcome-file>
+ </welcome-file-list>
+</web-app>

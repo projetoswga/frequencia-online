@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<div id="page-wrapper">
+	<div class="container-fluid">
+		<p:messages id="msg" showDetail="true" autoUpdate="true" closable="true" showSummary="false" />
+		<div class="row">
+			<h3 class="page-header titulo-pagina">
+				<ui:insert name="titulo" />
+			</h3>
+		</div>
+
+		<div class="row">
+			<ui:insert name="conteudo" />
+		</div>
+	</div>
+</div>
+</html>
