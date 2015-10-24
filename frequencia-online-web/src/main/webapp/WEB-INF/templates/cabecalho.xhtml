@@ -5,14 +5,16 @@
 	  xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <!-- MENU AGRUPADO -->
-<div class="navbar-header cabecalho-sombra"> 
+<div class="navbar-header cabecalho-sombra">
 	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 		<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 	</button>
-	<h:panelGrid columns="3">
-		<h:graphicImage library="images" name="esaf-logo2.png" styleClass="imagem-logo-esaf"/>
+	<h:panelGrid columns="4">
+		<h:outputLink value="http://www.esaf.fazenda.gov.br" target="_blank">
+			<h:graphicImage library="images" name="esaf-logo3.png" styleClass="imagem-logo-esaf" />
+		</h:outputLink>
 		<a class="navbar-brand cabecalho-nome-sistema" href="index.html">Frequência</a>
-		<h:outputLabel value="Versão: #{versaoUtil.versao} - #{versaoUtil.hora}" styleClass="label-versao" 
+		<h:outputLabel value="Versão: #{versaoUtil.versao} - #{versaoUtil.hora}" styleClass="navbar-brand label-versao" 
 			rendered="#{versaoUtil.versao != null and not empty versaoUtil.versao}"/>
 	</h:panelGrid>
 </div>
